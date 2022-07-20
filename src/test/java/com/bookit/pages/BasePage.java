@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public abstract class BasePage {
+public class BasePage {
 
     public  BasePage() {
         PageFactory.initElements(Driver.get(), this);
@@ -14,9 +14,11 @@ public abstract class BasePage {
     @FindBy (xpath = "//input[@name='email']")
     public WebElement emailField;
 
-    @FindBy (xpath ="//input[@name='password']")
+    @FindBy (xpath = "//input[@name='password']")
     public WebElement passwordField;
 
     @FindBy (xpath = "//button[.='sign in']")
     public  WebElement signInButton;
+
+
 }
